@@ -9,7 +9,7 @@ shinyUI(fluidPage(
 
   title = "Agente Viajero con Recocido Simulado, Shiny y R",
 
-  tags$h2(tags$a(href="/traveling-salesman", "Agente Viajero", target="_blank")),
+  tags$h2(tags$a(href="/AgenteViajeroColombia", "Agente Viajero", target="_blank")),
 
   plotOutput("map", height="550px"),
 
@@ -40,7 +40,7 @@ shinyUI(fluidPage(
       selectInput("map_name", NA, c("World", "USA"), "World", width="100px"),
       p("Seleccione las ciudades individualmente, o", actionButton("set_random_cities", "elija hacerlo aleatoriamente", icon=icon("refresh"))),
       selectizeInput("cities", NA, all_cities$full.name, multiple=TRUE, width="100%",
-                     options = list(maxItems=30, maxOptions=100, placeholder="Start typing to select some cities...",
+                     options = list(maxItems=30, maxOptions=100, placeholder="Seleccione algunas ciudades...",
                                     selectOnTab=TRUE, openOnFocus=FALSE, hideSelected=TRUE)),
       checkboxInput("label_cities", "Etiquetar las ciudades sobre el mapa?", FALSE)
     ),
