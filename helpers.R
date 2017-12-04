@@ -141,7 +141,7 @@ seed_cities = c(
 "Rio de Janeiro, Brazil",
 "Montreal, Canada",
 "Beijing, China",
-"Moroni, Comoros",
+"Bogota, Colombia",
 "Cairo, Egypt",
 "Paris, France",
 "Athens, Greece",
