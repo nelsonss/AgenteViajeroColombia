@@ -179,7 +179,10 @@ shinyServer(function(input, output, session) {
   output$distance_results = renderPlot({
     # BORRAR
     vals$distances=12
+    
     if (all(is.na(vals$distances))) return()
+    # BORRAR
+    vals$number_of_loops=100
 
     xvals = vals$plot_every_iterations * (1:vals$number_of_loops)
     plot(xvals, vals$distances, type='o', pch=19, cex=0.7,
