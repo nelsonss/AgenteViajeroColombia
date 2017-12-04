@@ -1,4 +1,5 @@
 library(shiny)
+setwd("~/GitHub/AgenteViajeroColombia/data")
 if (!exists("all_cities")) all_cities = readRDS("cities.rds")
 if (!exists("usa_cities")) usa_cities = readRDS("usa_cities.rds")
 if (!exists("distance_matrix")) distance_matrix = readRDS("distance_matrix.rds")
