@@ -44,7 +44,8 @@ generate_random_cities = function(n = 10, min_dist = 250, usa_only=FALSE) {
 plot_base_map = function(map_name="world") {
   margins = c(3.5, 0, 3.5, 0)
   if (map_name == "world") {
-    map("world", col="#f3f3f3", fill=TRUE, lwd=0.2, mar=margins)
+    # map("world", col="#f3f3f3", fill=TRUE, lwd=0.2, mar=margins)
+    map("world","Colombia", col="#f3f3f3", fill=TRUE, lwd=0.2, mar=margins)
   } else if (map_name == "usa") {
     map("usa", col="#f3f3f3", border=FALSE, fill=TRUE, mar=margins) #, projection="albers", parameters=c(29.5, 45.5))
     map("state", add=TRUE, col="#999999", fill=FALSE) #, projection="albers", parameters=c(29.5, 45.5))

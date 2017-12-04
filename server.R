@@ -46,7 +46,7 @@ shinyServer(function(input, output, session) {
 
     isolate({
       if (map_name() == "world") {
-        cty = generate_random_cities(n=20, min_dist=500)
+        cty = generate_random_cities(n=20, min_dist=50)
       } else if (map_name() == "usa") {
         cty = generate_random_cities(n=20, min_dist=50, usa_only=TRUE)
       }
@@ -104,7 +104,7 @@ shinyServer(function(input, output, session) {
 
       vals$number_of_loops = ceiling(vals$total_iterations / vals$plot_every_iterations)
       vals$distances = rep(NA, vals$number_of_loops)
-      
+
       vals$iter = 0
     })
 
