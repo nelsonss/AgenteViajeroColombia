@@ -177,13 +177,8 @@ shinyServer(function(input, output, session) {
   }, height=260)
 
   output$distance_results = renderPlot({
-    # BORRAR
-    vals$distances=12
-    
-    if (all(is.na(vals$distances))) return()
-    # BORRAR
-    vals$number_of_loops=100
 
+    if (all(is.na(vals$distances))) return()
     xvals = vals$plot_every_iterations * (1:vals$number_of_loops)
     plot(xvals, vals$distances, type='o', pch=19, cex=0.7,
          ylim=c(0, max(vals$distances, na.rm=TRUE)), xlab="iteraciones", ylab="distancia actual del tour",
