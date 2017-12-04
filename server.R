@@ -103,7 +103,8 @@ shinyServer(function(input, output, session) {
       vals$plot_every_iterations = ensure_between(input$plot_every_iterations, 1, 1000000)
 
       vals$number_of_loops = ceiling(vals$total_iterations / vals$plot_every_iterations)
-      vals$distances = rep(NA, vals$number_of_loops)
+      # vals$distances = rep(NA, vals$number_of_loops)
+      vals$distances = 10
 
       vals$iter = 0
     })
