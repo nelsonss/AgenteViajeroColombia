@@ -177,6 +177,8 @@ shinyServer(function(input, output, session) {
   }, height=260)
 
   output$distance_results = renderPlot({
+    # BORRAR
+    vals$distances=12
     if (all(is.na(vals$distances))) return()
 
     xvals = vals$plot_every_iterations * (1:vals$number_of_loops)
