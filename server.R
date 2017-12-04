@@ -182,7 +182,7 @@ shinyServer(function(input, output, session) {
     xvals = vals$plot_every_iterations * (1:vals$number_of_loops)
     plot(xvals, vals$distances, type='o', pch=19, cex=0.7,
          ylim=c(0, max(vals$distances, na.rm=TRUE)), xlab="iteraciones", ylab="distancia actual del tour",
-         main="Evolution of Current Tour Distance")
+         main="Evolución de la Distancia del Tour Actual")
   }, height=260)
 
   session$onSessionEnded(function() {

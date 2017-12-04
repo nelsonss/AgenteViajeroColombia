@@ -1,0 +1,5 @@
+library(shiny)
+if (!exists("all_cities")) all_cities = readRDS("cities.rds")
+if (!exists("usa_cities")) usa_cities = readRDS("usa_cities.rds")
+if (!exists("distance_matrix")) distance_matrix = readRDS("distance_matrix.rds")
+if (!exists("great_circles")) great_circles = readRDS("great_circles.rds")
