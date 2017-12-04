@@ -22,9 +22,10 @@ generate_random_cities = function(n = 10, min_dist = 250, usa_only=FALSE) {
   i = 0
   while (nrow(cities) < n & i < nrow(all_cities)) {
     candidate = candidates[sample(nrow(candidates), 1),]
+    # se recalcula la matriz de la distancias de las ciudades de muestra
+    candidate_dist_matrix = distm(rbind(cities, candidate)[, c("long", "lat")]) * miles_per_meter
+
     if (min(candidate_dist_matrix[candidate_dist_matrix > 0]) > min_dist) {
-      # se recalcula la matriz de la distancias de las ciudades de muestra
-      candidate_dist_matrix = distm(rbind(cities, candidate)[, c("long", "lat")]) * miles_per_meter
       # Si la distancia minima de la matrix es positiva y a su vez superior a min_dist
       # añadirla a la lista de ciudades aleatorias y quitarla de las ciudades candidatas
       cities = rbind(cities, candidate)
