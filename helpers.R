@@ -162,5 +162,5 @@ seed_cities = c(
   "Villavicencio, Colombia",
   "Arauca, Colombia",
   "Mocoa, Colombia",
-  "Yopal, Colombia",
-)
+  "Yopal, Colombia"
+  )
